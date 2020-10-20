@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: module name here
       url: /core
+    - output: web,pdf
+      title: Custom Transforms and Dataloaders
+      url: /tab_ae
     output: web
     title: Yikai_helper_funcs
   output: web

@@ -1,6 +1,7 @@
 {
   "Yikai_helper_funcs": {
     "Overview": "/",
-    "module name here": "/core"
+    "module name here": "/core",
+    "Custom Transforms and Dataloaders": "/tab_ae"
   }
 }
