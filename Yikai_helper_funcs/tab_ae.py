@@ -5,11 +5,13 @@ __all__ = ['ReadTabBatchIdentity', 'TabularPandasIdentity', 'TabDataLoaderIdenti
 
 # Cell
 from fastai.tabular.all import *
+from fastcore import *
 
 # Cell
 class ReadTabBatchIdentity(ItemTransform):
     "Read a batch of data and return the inputs as both `x` and `y`"
-    def __init__(self, to): self.to = to
+    def __init__(self, to): #self.to = to
+        store_attr
 
     def encodes(self, to):
         if not to.with_cont: res = (tensor(to.cats).long(),) + (tensor(to.cats).long(),)
@@ -20,6 +22,7 @@ class ReadTabBatchIdentity(ItemTransform):
 class TabularPandasIdentity(TabularPandas): pass
 
 # Cell
+
 @delegates()
 class TabDataLoaderIdentity(TabDataLoader):
     "A transformed `DataLoader` for AutoEncoder problems with Tabular data"
@@ -59,7 +62,9 @@ class RecreatedLoss(Module):
 # Cell
 class BatchSwapNoise(Module):
     "Swap Noise Module"
-    def __init__(self, p): store_attr()
+    def __init__(self, p): #store_attr()
+        self.p = p
+
 
     def forward(self, x):
         if self.training:
@@ -77,7 +82,7 @@ class BatchSwapNoise(Module):
 class TabularAE(TabularModel):
     "A simple AutoEncoder model"
     def __init__(self, emb_szs, n_cont, hidden_size, cats, low, high, ps=0.2, embed_p=0.01, bswap=None):
-        super().__init__(emb_szs, n_cont, layers=[1024, 512, 256], out_sz=hidden_size, embed_p=embed_p, act_cls=Mish())
+        super().__init__(emb_szs, n_cont, layers=[1024, 512, 256], out_sz=hidden_size, embed_p=embed_p)
 
         self.bswap = bswap
         self.cats = cats
