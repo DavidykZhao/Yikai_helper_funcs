@@ -2,6 +2,7 @@
   "Yikai_helper_funcs": {
     "Overview": "/",
     "module name here": "/core",
+    "Title": "/bayes_opt",
     "Custom Transforms and Dataloaders": "/tab_ae"
   }
 }

@@ -3,12 +3,13 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"say_hello": "00_core.ipynb",
-         "ReadTabBatchIdentity": "tab_ae.ipynb",
-         "TabularPandasIdentity": "tab_ae.ipynb",
-         "TabDataLoaderIdentity": "tab_ae.ipynb",
-         "RecreatedLoss": "tab_ae.ipynb",
-         "BatchSwapNoise": "tab_ae.ipynb",
-         "TabularAE": "tab_ae.ipynb"}
+         "optimize_bayes_param": "01_bayes_opt.ipynb",
+         "ReadTabBatchIdentity": "02_tab_ae.ipynb",
+         "TabularPandasIdentity": "02_tab_ae.ipynb",
+         "TabDataLoaderIdentity": "02_tab_ae.ipynb",
+         "RecreatedLoss": "02_tab_ae.ipynb",
+         "BatchSwapNoise": "02_tab_ae.ipynb",
+         "TabularAE": "02_tab_ae.ipynb"}
 
 modules = ["core.py",
            "tab_ae.py"]

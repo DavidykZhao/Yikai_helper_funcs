@@ -13,6 +13,9 @@ entries:
       title: module name here
       url: /core
     - output: web,pdf
+      title: Title
+      url: /bayes_opt
+    - output: web,pdf
       title: Custom Transforms and Dataloaders
       url: /tab_ae
     output: web
