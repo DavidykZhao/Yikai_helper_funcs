@@ -12,6 +12,7 @@ index = {"say_hello": "00_core.ipynb",
          "TabularAE": "02_tab_ae.ipynb"}
 
 modules = ["core.py",
+           "bayes_opt.py",
            "tab_ae.py"]
 
 doc_url = "https://DavidykZhao.github.io/Yikai_helper_funcs/"
