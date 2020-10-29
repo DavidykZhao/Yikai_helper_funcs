@@ -51,6 +51,21 @@ nb_path: "03_param_finetune.ipynb"
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -130,7 +145,7 @@ Kwargs are to passed into the param-greis</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">XgboostParamGenerator</span><span class="p">()</span><span class="o">.</span><span class="n">params_included</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -180,7 +195,7 @@ Kwargs are to passed into the param-greis</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">LgbmParamGenerator</span><span class="p">(</span><span class="n">num_leaves</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span><span class="o">.</span><span class="n">params_included</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -204,7 +219,7 @@ Kwargs are to passed into the param-greis</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test_eq</span><span class="p">(</span><span class="n">LgbmParamGenerator</span><span class="p">(</span><span class="n">num_leaves</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span><span class="o">.</span><span class="n">params_included</span><span class="p">[</span><span class="s1">&#39;num_leaves&#39;</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -254,7 +269,7 @@ Kwargs are to passed into the param-greis</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test_eq</span><span class="p">(</span><span class="n">CatParamGenerator</span><span class="p">(</span><span class="n">iterations</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span><span class="o">.</span><span class="n">params_included</span><span class="p">[</span><span class="s1">&#39;iterations&#39;</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -418,8 +433,8 @@ Kwargs are to passed into the param-greis</p>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The best combination of hyperparameters are {&#39;ccp_alpha&#39;: 0.01404576843351655, &#39;max_depth&#39;: 25.87150799631823, &#39;min_samples_split&#39;: 34.492145859538965, &#39;n_estimators&#39;: 177.08001428597925}
-The best score for the hyperparameters are 0.8230000000000001
+<pre>The best combination of hyperparameters are {&#39;ccp_alpha&#39;: 0.010623840401627133, &#39;max_depth&#39;: 103.78219469876802, &#39;min_samples_split&#39;: 54.12854501543106, &#39;n_estimators&#39;: 461.4637315105481}
+The best score for the hyperparameters are 0.841
 </pre>
 </div>
 </div>
@@ -452,15 +467,15 @@ The best score for the hyperparameters are 0.8230000000000001
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([0.02110468, 0.03822427, 0.08085643, 0.00031941, 0.00570957,
-       0.05427745, 0.        , 0.        , 0.00192908, 0.02350117,
-       0.04443505, 0.00026566, 0.0001893 , 0.00041977, 0.00086492,
-       0.00485303, 0.00088066, 0.00287347, 0.00734206, 0.10487785,
-       0.17450613, 0.00083683, 0.00118026, 0.00075265, 0.00071203,
-       0.00049259, 0.03596796, 0.11077632, 0.00484993, 0.07671867,
-       0.        , 0.16905766, 0.00095814, 0.00529965, 0.00064111,
-       0.00072732, 0.000989  , 0.00102491, 0.01004052, 0.00138786,
-       0.00817174, 0.00087782, 0.00060271, 0.00031926, 0.00018513])</pre>
+<pre>array([0.02263548, 0.03073771, 0.09408312, 0.00077446, 0.00803689,
+       0.05262142, 0.00081775, 0.00085111, 0.00154406, 0.02943847,
+       0.04384802, 0.00165824, 0.00016562, 0.000832  , 0.00143298,
+       0.00967315, 0.0009602 , 0.00141895, 0.01107647, 0.11395   ,
+       0.13859854, 0.00268696, 0.00160482, 0.00165545, 0.00093105,
+       0.00140751, 0.02963863, 0.09103538, 0.00695942, 0.08989494,
+       0.00155125, 0.16204288, 0.00095849, 0.00925555, 0.00130819,
+       0.00108216, 0.0013884 , 0.00109776, 0.01360181, 0.00142078,
+       0.0112368 , 0.00154017, 0.00054215, 0.00092282, 0.00108196])</pre>
 </div>
 
 </div>
