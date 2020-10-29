@@ -1,8 +1,9 @@
 {
   "Yikai_helper_funcs": {
     "Overview": "/",
-    "module name here": "/core",
-    "Title": "/bayes_opt",
-    "Custom Transforms and Dataloaders": "/tab_ae"
+    "module name here": "core.html",
+    "Bayes_opt decorator": "bayes_opt.html",
+    "Custom Transforms and Dataloaders": "tab_ae.html",
+    "Params for common algorithms": "param_finetune.html"
   }
 }

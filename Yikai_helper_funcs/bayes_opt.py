@@ -11,10 +11,11 @@ from bayes_opt.util import load_logs
 from pathlib import Path
 from functools import wraps
 from typing import Dict
+import numpy as np
 
 
 # Cell
-def optimize_bayes_param(X, y, objective_fn=cross_val_score, *args_objective, **kwargs_objective):
+def optimize_bayes_param(X, y,  *args_objective, objective_fn=cross_val_score, **kwargs_objective):
     """
     The first closure passes in X, y and the objective funtion, which defaults to the cross_val_score function from sklearn.
 
@@ -31,16 +32,16 @@ def optimize_bayes_param(X, y, objective_fn=cross_val_score, *args_objective, **
         **kwargs passed to objective_fn
     """
 
-    def optimize_bayes_wo_param(parse_model_params):
+    def optimize_bayes_inner(parse_model_params):
 
         def _opt_engine(*args_model, **kwargs_model):
             """
             This is the running engine function that takes an estimator/model object and a loss function
 
             """
-
             estimator = parse_model_params(*args_model, **kwargs_model)
             return objective_fn(estimator, X=X, y=y, *args_objective, **kwargs_objective).mean()
+
 
         @wraps(parse_model_params)
         def run_trials(pbounds: Dict,
@@ -89,6 +90,7 @@ def optimize_bayes_param(X, y, objective_fn=cross_val_score, *args_objective, **
 
             optimizer.maximize(init_points, n_iter, kappa=kappa, acq=acq)
             print(f"The best combination of hyperparameters are { optimizer.max['params'] }")
+            print(f"The best score for the hyperparameters are { optimizer.max['target'] }")
             best_model = parse_model_params(**optimizer.max['params'])
             if fit:
                 best_model.fit(X=X, y=y)
@@ -96,4 +98,4 @@ def optimize_bayes_param(X, y, objective_fn=cross_val_score, *args_objective, **
 
         return run_trials
 
-    return optimize_bayes_wo_param
+    return optimize_bayes_inner

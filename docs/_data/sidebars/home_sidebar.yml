@@ -11,13 +11,16 @@ entries:
       url: /
     - output: web,pdf
       title: module name here
-      url: /core
+      url: core.html
     - output: web,pdf
-      title: Title
-      url: /bayes_opt
+      title: Bayes_opt decorator
+      url: bayes_opt.html
     - output: web,pdf
       title: Custom Transforms and Dataloaders
-      url: /tab_ae
+      url: tab_ae.html
+    - output: web,pdf
+      title: Params for common algorithms
+      url: param_finetune.html
     output: web
     title: Yikai_helper_funcs
   output: web

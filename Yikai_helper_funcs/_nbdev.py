@@ -9,11 +9,17 @@ index = {"say_hello": "00_core.ipynb",
          "TabDataLoaderIdentity": "02_tab_ae.ipynb",
          "RecreatedLoss": "02_tab_ae.ipynb",
          "BatchSwapNoise": "02_tab_ae.ipynb",
-         "TabularAE": "02_tab_ae.ipynb"}
+         "TabularAE": "02_tab_ae.ipynb",
+         "HyperparamsGenerator": "03_param_finetune.ipynb",
+         "XgboostParamGenerator": "03_param_finetune.ipynb",
+         "LgbmParamGenerator": "03_param_finetune.ipynb",
+         "CatParamGenerator": "03_param_finetune.ipynb",
+         "RFParamGenerator": "03_param_finetune.ipynb"}
 
 modules = ["core.py",
            "bayes_opt.py",
-           "tab_ae.py"]
+           "tab_ae.py",
+           "params.py"]
 
 doc_url = "https://DavidykZhao.github.io/Yikai_helper_funcs/"
 
