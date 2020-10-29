@@ -12,6 +12,7 @@ from Yikai_helper_funcs import *
 from sklearn.datasets import make_classification
 from lightgbm import LGBMClassifier
 from xgboost import XGBClassifier
+from sklearn.model_selection import cross_val_score
 
 # Internal Cell
 
