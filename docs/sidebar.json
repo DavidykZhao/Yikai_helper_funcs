@@ -4,6 +4,7 @@
     "module name here": "core.html",
     "Bayes_opt decorator": "bayes_opt.html",
     "Custom Transforms and Dataloaders": "tab_ae.html",
-    "Params for common algorithms": "param_finetune.html"
+    "Params for common algorithms": "param_finetune.html",
+    "Iterate over classifiers with Bayesian optimization": "model_zoo.html"
   }
 }

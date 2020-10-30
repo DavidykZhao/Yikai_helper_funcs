@@ -14,6 +14,10 @@ from lightgbm import LGBMClassifier
 from xgboost import XGBClassifier
 from sklearn.model_selection import cross_val_score
 
+from sklearn.datasets import make_multilabel_classification, make_regression
+from sklearn.metrics import make_scorer, roc_auc_score
+
+
 # Internal Cell
 
 class HyperparamsGenerator:
@@ -74,10 +78,10 @@ class LgbmParamGenerator(HyperparamsGenerator):
             'num_leaves': (30, 200),
             'learning_rate': (0.005,0.3),
             #'subsample_for_bin': list(range(20000, 300000, 20000)),
-            'min_child_samples': (20, 500),
+           'min_child_samples': (20, 500),
             'reg_alpha': (0., 0.99),
             'reg_lambda': (0., 0.99),
-            'colsample_bytree': (0.6, 1),
+           'colsample_bytree': (0.6, 1.0),
             **self.kwargs
                 }
         return param_matrix

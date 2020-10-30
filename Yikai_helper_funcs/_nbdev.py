@@ -14,12 +14,14 @@ index = {"say_hello": "00_core.ipynb",
          "XgboostParamGenerator": "03_param_finetune.ipynb",
          "LgbmParamGenerator": "03_param_finetune.ipynb",
          "CatParamGenerator": "03_param_finetune.ipynb",
-         "RFParamGenerator": "03_param_finetune.ipynb"}
+         "RFParamGenerator": "03_param_finetune.ipynb",
+         "ModelIterator": "04_model_zoo.ipynb"}
 
 modules = ["core.py",
            "bayes_opt.py",
            "tab_ae.py",
-           "params.py"]
+           "params.py",
+           "model_iterator.py"]
 
 doc_url = "https://DavidykZhao.github.io/Yikai_helper_funcs/"
 

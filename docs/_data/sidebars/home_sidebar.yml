@@ -21,6 +21,9 @@ entries:
     - output: web,pdf
       title: Params for common algorithms
       url: param_finetune.html
+    - output: web,pdf
+      title: Iterate over classifiers with Bayesian optimization
+      url: model_zoo.html
     output: web
     title: Yikai_helper_funcs
   output: web
