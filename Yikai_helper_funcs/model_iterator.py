@@ -68,16 +68,17 @@ class ModelIterator:
         self.log_path = Path(log_path)
         if not rf_params: self.rf_params = {}
         if not lightgbm_params: self.lightgbm_params = {}
-        if not xgboost_params: self.xgboost_params = {}
+        if not xgboost_params: self.xgboost_params = {} # These are passed in the fit_predict method
         self.rf_init_points = rf_init_points
         self.rf_n_iter = rf_n_iter
         self.xgboost_init_points = xgboost_init_points
         self.xgboost_n_iter = xgboost_n_iter
         self.lightgbm_init_points = lightgbm_init_points
         self.lightgbm_n_iter = lightgbm_n_iter
+        self.x = x
+        self.y = y
 
 
-    # TODO: Change hardcoded init_points & n_iter
     # TODO: Add try except blocks
     def _run_rf(self, x, y, **kwargs_model ):
         """  run RF and log tehm at self.log_path
@@ -104,7 +105,7 @@ class ModelIterator:
                         XgboostParamGenerator().matrix_generation()
 
         """
-        params_xgboost = XgboostParamGenerator().matrix_generation()
+        params_xgboost = XgboostParamGenerator(**kwargs_model).matrix_generation()
 
         @optimize_bayes_param(X=x, y=y)
         def optimize_xgboost(n_estimators, max_depth, min_child_weight, gamma,learning_rate, subsample):
@@ -125,7 +126,7 @@ class ModelIterator:
                         LgbmParamGenerator().matrix_generation()
             """
 
-        params_lgbm = LgbmParamGenerator().matrix_generation()
+        params_lgbm = LgbmParamGenerator(**kwargs_model).matrix_generation()
 
         @optimize_bayes_param(X=x, y=y)
         def optimize_lgbm(num_leaves: int,learning_rate:float, min_child_samples, reg_alpha, reg_lambda, colsample_bytree):
@@ -144,8 +145,8 @@ class ModelIterator:
 
     def fit_predict(self, compile_results = True):
 
-        best_rf = self._run_rf(x, y, **self.rf_params)
-        best_xgboost = self._run_xgboost(x, y, **self.xgboost_params)
+        best_rf = self._run_rf(self.x, self.y, **self.rf_params)
+        best_xgboost = self._run_xgboost(self.x, self.y, **self.xgboost_params)
        # best_lightgbm = self._run_lightgbm(x, y, **self.lightgbm_params)
 
         print("""
