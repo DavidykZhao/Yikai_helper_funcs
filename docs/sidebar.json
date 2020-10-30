@@ -1,10 +1,10 @@
 {
   "Yikai_helper_funcs": {
     "Overview": "/",
-    "module name here": "core.html",
-    "Bayes_opt decorator": "bayes_opt.html",
-    "Custom Transforms and Dataloaders": "tab_ae.html",
-    "Params for common algorithms": "param_finetune.html",
-    "Iterate over classifiers with Bayesian optimization": "model_zoo.html"
+    "module name here": "core",
+    "Bayes_opt decorator": "bayes_opt",
+    "Custom Transforms and Dataloaders": "tab_ae",
+    "Params for common algorithms": "param_finetune",
+    "Iterate over classifiers with Bayesian optimization": "model_zoo"
   }
 }
