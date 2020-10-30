@@ -71,7 +71,7 @@ nb_path: "03_param_finetune.ipynb"
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_data</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Synthetic binary classification dataset.&quot;&quot;&quot;</span>
     <span class="n">data</span><span class="p">,</span> <span class="n">targets</span> <span class="o">=</span> <span class="n">make_classification</span><span class="p">(</span>
-        <span class="n">n_samples</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+        <span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
         <span class="n">n_features</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span>
         <span class="n">n_informative</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
         <span class="n">n_redundant</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
@@ -411,7 +411,7 @@ Kwargs are to passed into the param-greis</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_rf</span> <span class="o">=</span> <span class="n">optimize_forest</span><span class="p">(</span><span class="n">init_points</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pbounds</span><span class="o">=</span><span class="n">params_forest</span><span class="p">,</span> <span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;./bayes_opt_logs/forest&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_rf</span> <span class="o">=</span> <span class="n">optimize_forest</span><span class="p">(</span><span class="n">init_points</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pbounds</span><span class="o">=</span><span class="n">params_forest</span><span class="p">,</span> <span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;./bayes_opt_logs/forest_test&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -424,12 +424,29 @@ Kwargs are to passed into the param-greis</p>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The best combination of hyperparameters are {&#39;ccp_alpha&#39;: 0.01, &#39;max_depth&#39;: 47.39686802093305, &#39;min_samples_split&#39;: 48.95282306895043, &#39;n_estimators&#39;: 428.23486900652205}
-The best score for the hyperparameters are 0.8440000000000001
+<pre>The best combination of hyperparameters are {&#39;ccp_alpha&#39;: 0.01601303519622531, &#39;max_depth&#39;: 72.95784224682048, &#39;min_samples_split&#39;: 19.177736944306574, &#39;n_estimators&#39;: 203.55736856805655}
+The best score for the hyperparameters are 0.8320000000000001
 </pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -3399,6 +3416,35 @@ The best score for the hyperparameters are 0.7081512613696713
 </div>
 </div>
 </div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">objective_function</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">skf</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="n">n_splits</span><span class="p">)</span>
+
+    <span class="n">perfo</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">train_index</span><span class="p">,</span> <span class="n">test_index</span> <span class="ow">in</span> <span class="n">skf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
+        <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
+
+        <span class="n">estimator</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_train</span><span class="p">)</span>
+        <span class="n">y_preds</span> <span class="o">=</span> <span class="n">estimator</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+        <span class="n">perfo</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_preds</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">perfo</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Multi-label-classification">Multi-label classification<a class="anchor-link" href="#Multi-label-classification"> </a></h2>
