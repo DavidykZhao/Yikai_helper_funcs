@@ -79,6 +79,7 @@ class ModelIterator:
         self.y = y
 
 
+    # TODO: Change hardcoded init_points & n_iter
     # TODO: Add try except blocks
     def _run_rf(self, x, y, **kwargs_model ):
         """  run RF and log tehm at self.log_path

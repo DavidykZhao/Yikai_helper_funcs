@@ -10,8 +10,8 @@ import xgboost
 from sklearn.ensemble import RandomForestClassifier
 from Yikai_helper_funcs import *
 from sklearn.datasets import make_classification
-from lightgbm import LGBMClassifier
-from xgboost import XGBClassifier
+from lightgbm import LGBMClassifier, LGBMRegressor
+from xgboost import XGBClassifier, XGBRegressor
 from sklearn.model_selection import cross_val_score
 
 from sklearn.datasets import make_multilabel_classification, make_regression

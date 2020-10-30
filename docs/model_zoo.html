@@ -44,21 +44,6 @@ nb_path: "04_model_zoo.ipynb"
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The autoreload extension is already loaded. To reload it, use:
-  %reload_ext autoreload
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -187,10 +172,10 @@ nb_path: "04_model_zoo.ipynb"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The best combination of hyperparameters are {&#39;ccp_alpha&#39;: 0.08830026526241672, &#39;max_depth&#39;: 100.19386157870402, &#39;min_samples_split&#39;: 40.341341327020295, &#39;n_estimators&#39;: 350.0713846235119}
-The best score for the hyperparameters are 0.93
-The best combination of hyperparameters are {&#39;gamma&#39;: 32.98401068803757, &#39;learning_rate&#39;: 0.04145004574335963, &#39;max_depth&#39;: 6.416662902313407, &#39;min_child_weight&#39;: 0.300129784066568, &#39;n_estimators&#39;: 18.071373415937323, &#39;subsample&#39;: 0.8980155925879995}
-The best score for the hyperparameters are 0.9099999999999999
+<pre>The best combination of hyperparameters are {&#39;ccp_alpha&#39;: 0.029834902375002192, &#39;max_depth&#39;: 35.69860577029296, &#39;min_samples_split&#39;: 4.497178477874517, &#39;n_estimators&#39;: 406.4077438886299}
+The best score for the hyperparameters are 0.99
+The best combination of hyperparameters are {&#39;gamma&#39;: 10.457964153104308, &#39;learning_rate&#39;: 0.27079083302557405, &#39;max_depth&#39;: 3.9195331071476, &#39;min_child_weight&#39;: 0.22851186079028146, &#39;n_estimators&#39;: 97.85382371807863, &#39;subsample&#39;: 0.5507585185908407}
+The best score for the hyperparameters are 0.99
 
         ----------------------------------------------------
         Returned best_rf, best_xgboost
@@ -270,214 +255,214 @@ The best score for the hyperparameters are 0.9099999999999999
   </thead>
   <tbody>
     <tr>
-      <th>8</th>
-      <td>0.92</td>
-      <td>{'ccp_alpha': 0.067279368242635, 'max_depth': 91.03474087288205, 'min_samples_split': 26.240855559576847, 'n_estimators': 430.02833821659726}</td>
-      <td>{'datetime': '2020-10-30 11:36:40', 'elapsed': 6.50518, 'delta': 1.469874}</td>
-      <td>forest</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>0.92</td>
-      <td>{'ccp_alpha': 0.07100718803377201, 'max_depth': 48.415180987244405, 'min_samples_split': 23.245071908137618, 'n_estimators': 222.12516088441248}</td>
-      <td>{'datetime': '2020-10-30 11:36:42', 'elapsed': 7.872465, 'delta': 0.8809300000000001}</td>
-      <td>forest</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>0.91</td>
-      <td>{'gamma': 23.471406303633138, 'learning_rate': 0.30000000000000004, 'max_depth': 6.496415610335795, 'min_child_weight': 0.6000000000000001, 'n_estimators': 69.8177992230171, 'subsample': 1.0}</td>
-      <td>{'datetime': '2020-10-30 11:37:30', 'elapsed': 2.38872, 'delta': 0.498231}</td>
-      <td>xgboost</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>0.91</td>
-      <td>{'gamma': 26.684037893019685, 'learning_rate': 0.30000000000000004, 'max_depth': 10.089188228688416, 'min_child_weight': 0.6000000000000001, 'n_estimators': 67.6191739478623, 'subsample': 1.0}</td>
-      <td>{'datetime': '2020-10-30 11:37:30', 'elapsed': 1.890489, 'delta': 0.33347899999999997}</td>
-      <td>xgboost</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>0.91</td>
-      <td>{'gamma': 25.03612198995891, 'learning_rate': 0.30000000000000004, 'max_depth': 6.6950519570567195, 'min_child_weight': 0.6000000000000001, 'n_estimators': 64.7335622168152, 'subsample': 1.0}</td>
-      <td>{'datetime': '2020-10-30 11:37:30', 'elapsed': 1.55701, 'delta': 0.385665}</td>
-      <td>xgboost</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>0.91</td>
-      <td>{'gamma': 27.311304164918727, 'learning_rate': 0.17494967328494102, 'max_depth': 3.792886316623781, 'min_child_weight': 0.511493892786127, 'n_estimators': 68.24213228044414, 'subsample': 0.9711859231425151}</td>
-      <td>{'datetime': '2020-10-30 11:37:29', 'elapsed': 0.570624, 'delta': 0.098658}</td>
-      <td>xgboost</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0.91</td>
-      <td>{'ccp_alpha': 0.051249200760959006, 'max_depth': 90.2344518151939, 'min_samples_split': 6.47177794834542, 'n_estimators': 161.11245121507758}</td>
-      <td>{'datetime': '2020-10-30 11:36:37', 'elapsed': 3.643096, 'delta': 0.616495}</td>
-      <td>forest</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>0.91</td>
-      <td>{'gamma': 29.907283188432896, 'learning_rate': 0.22936197296285502, 'max_depth': 4.936189462050605, 'min_child_weight': 0.585635681443024, 'n_estimators': 90.27879421089291, 'subsample': 0.9730594600408781}</td>
-      <td>{'datetime': '2020-10-30 11:37:28', 'elapsed': 0.37666000000000005, 'delta': 0.144502}</td>
-      <td>xgboost</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>0.91</td>
-      <td>{'gamma': 21.597278566095166, 'learning_rate': 0.155399005398684, 'max_depth': 3.3453028355846213, 'min_child_weight': 0.36001909276979904, 'n_estimators': 10.781942173643085, 'subsample': 0.803301864300732}</td>
-      <td>{'datetime': '2020-10-30 11:37:28', 'elapsed': 0.026674, 'delta': 0.026674}</td>
-      <td>xgboost</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>0.90</td>
-      <td>{'ccp_alpha': 0.09985531011958401, 'max_depth': 66.98699990325483, 'min_samples_split': 2.0, 'n_estimators': 391.71719157229995}</td>
-      <td>{'datetime': '2020-10-30 11:36:45', 'elapsed': 10.833482, 'delta': 1.6076329999999999}</td>
-      <td>forest</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>0.90</td>
-      <td>{'gamma': 5.365620577425313, 'learning_rate': 0.010486829902519, 'max_depth': 3.9152371297170303, 'min_child_weight': 0.46856138291307303, 'n_estimators': 83.58061333688336, 'subsample': 0.43655178132756106}</td>
-      <td>{'datetime': '2020-10-30 11:37:28', 'elapsed': 0.471966, 'delta': 0.095306}</td>
-      <td>xgboost</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>0.90</td>
-      <td>{'gamma': 4.475748433081123, 'learning_rate': 0.289110353293002, 'max_depth': 4.540449330988248, 'min_child_weight': 0.158540151910118, 'n_estimators': 65.65854553297795, 'subsample': 0.632591860313326}</td>
-      <td>{'datetime': '2020-10-30 11:37:28', 'elapsed': 0.12698099999999998, 'delta': 0.100307}</td>
-      <td>xgboost</td>
-    </tr>
-    <tr>
       <th>0</th>
-      <td>0.90</td>
-      <td>{'ccp_alpha': 0.09618125652521001, 'max_depth': 61.08996911109283, 'min_samples_split': 5.21092742593978, 'n_estimators': 206.12720949857385}</td>
-      <td>{'datetime': '2020-10-30 11:36:34', 'elapsed': 0.0, 'delta': 0.0}</td>
-      <td>forest</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.90</td>
-      <td>{'ccp_alpha': 0.086604590966162, 'max_depth': 49.484625276614, 'min_samples_split': 24.393876818822147, 'n_estimators': 223.8343877755006}</td>
-      <td>{'datetime': '2020-10-30 11:36:36', 'elapsed': 2.14823, 'delta': 0.839047}</td>
-      <td>forest</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.90</td>
-      <td>{'ccp_alpha': 0.091617303157733, 'max_depth': 92.13880367542795, 'min_samples_split': 23.33468467250806, 'n_estimators': 85.73520917172775}</td>
-      <td>{'datetime': '2020-10-30 11:36:37', 'elapsed': 3.026601, 'delta': 0.340362}</td>
-      <td>forest</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>0.89</td>
-      <td>{'gamma': 6.657311159502244, 'learning_rate': 0.27574681526677103, 'max_depth': 6.190332127664505, 'min_child_weight': 0.11562958249880101, 'n_estimators': 70.03974771118654, 'subsample': 0.48607006467532904}</td>
-      <td>{'datetime': '2020-10-30 11:37:29', 'elapsed': 1.171345, 'delta': 0.391582}</td>
-      <td>xgboost</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>0.89</td>
-      <td>{'gamma': 9.65462615809409, 'learning_rate': 0.282951525754122, 'max_depth': 7.845212052396139, 'min_child_weight': 0.024555287845468003, 'n_estimators': 74.62573910337052, 'subsample': 0.31947177034317603}</td>
-      <td>{'datetime': '2020-10-30 11:37:28', 'elapsed': 0.201461, 'delta': 0.07448}</td>
-      <td>xgboost</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>0.89</td>
-      <td>{'gamma': 28.19158857295412, 'learning_rate': 0.13735716372828602, 'max_depth': 4.695676215555062, 'min_child_weight': 0.189407919750186, 'n_estimators': 67.61913170509787, 'subsample': 0.6490783386343171}</td>
-      <td>{'datetime': '2020-10-30 11:37:29', 'elapsed': 0.779763, 'delta': 0.124705}</td>
-      <td>xgboost</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>0.89</td>
-      <td>{'ccp_alpha': 0.01, 'max_depth': 20.0, 'min_samples_split': 12.146941007698247, 'n_estimators': 192.85147903031628}</td>
-      <td>{'datetime': '2020-10-30 11:36:43', 'elapsed': 8.760075, 'delta': 0.8876100000000001}</td>
-      <td>forest</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>0.88</td>
-      <td>{'ccp_alpha': 0.1, 'max_depth': 42.81889957630193, 'min_samples_split': 8.361855815201398, 'n_estimators': 74.0476712816246}</td>
-      <td>{'datetime': '2020-10-30 11:36:43', 'elapsed': 9.225849, 'delta': 0.46577399999999997}</td>
-      <td>forest</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.88</td>
-      <td>{'ccp_alpha': 0.086581213471507, 'max_depth': 70.42589233505448, 'min_samples_split': 44.070515534640336, 'n_estimators': 351.0797773071582}</td>
-      <td>{'datetime': '2020-10-30 11:36:35', 'elapsed': 1.309183, 'delta': 1.309183}</td>
-      <td>forest</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>0.88</td>
-      <td>{'gamma': 28.05142600015543, 'learning_rate': 0.132150452774288, 'max_depth': 11.389215008870234, 'min_child_weight': 0.517914274862028, 'n_estimators': 51.212638041378476, 'subsample': 0.47118235283652005}</td>
-      <td>{'datetime': '2020-10-30 11:37:29', 'elapsed': 0.632872, 'delta': 0.062248}</td>
-      <td>xgboost</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>0.88</td>
-      <td>{'gamma': 15.986553553770474, 'learning_rate': 0.20860608539091102, 'max_depth': 9.800468308617411, 'min_child_weight': 0.460010854180655, 'n_estimators': 10.795039846669322, 'subsample': 0.28527256857417205}</td>
-      <td>{'datetime': '2020-10-30 11:37:29', 'elapsed': 0.6550579999999999, 'delta': 0.022185999999999997}</td>
-      <td>xgboost</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>0.85</td>
-      <td>{'ccp_alpha': 0.08036747162707, 'max_depth': 39.53153893913178, 'min_samples_split': 53.289888968835996, 'n_estimators': 103.92341219365113}</td>
-      <td>{'datetime': '2020-10-30 11:36:41', 'elapsed': 6.991535, 'delta': 0.486355}</td>
+      <td>0.99</td>
+      <td>{'ccp_alpha': 0.029834902375002, 'max_depth': 35.69860577029296, 'min_samples_split': 4.497178477874517, 'n_estimators': 406.4077438886299}</td>
+      <td>{'datetime': '2020-10-30 12:15:31', 'elapsed': 0.0, 'delta': 0.0}</td>
       <td>forest</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.78</td>
-      <td>{'ccp_alpha': 0.1, 'max_depth': 51.9964211326799, 'min_samples_split': 55.69450738199383, 'n_estimators': 408.90741205395057}</td>
-      <td>{'datetime': '2020-10-30 11:36:46', 'elapsed': 12.439134, 'delta': 1.605652}</td>
+      <td>0.99</td>
+      <td>{'ccp_alpha': 0.049457167892975, 'max_depth': 21.34714460344915, 'min_samples_split': 2.097431305959691, 'n_estimators': 489.86987505735203}</td>
+      <td>{'datetime': '2020-10-30 12:15:45', 'elapsed': 14.030575, 'delta': 2.085842}</td>
       <td>forest</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>0.50</td>
-      <td>{'ccp_alpha': 0.030780761219811003, 'max_depth': 67.62944564439553, 'min_samples_split': 63.65984721232478, 'n_estimators': 131.49333328182905}</td>
-      <td>{'datetime': '2020-10-30 11:36:37', 'elapsed': 2.686239, 'delta': 0.538009}</td>
+      <th>4</th>
+      <td>0.99</td>
+      <td>{'ccp_alpha': 0.021861492413113002, 'max_depth': 83.05304497803968, 'min_samples_split': 20.243912858025652, 'n_estimators': 270.7014108189465}</td>
+      <td>{'datetime': '2020-10-30 12:15:33', 'elapsed': 2.019139, 'delta': 0.823596}</td>
       <td>forest</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.50</td>
-      <td>{'ccp_alpha': 0.018863501294665002, 'max_depth': 93.4608196817206, 'min_samples_split': 80.59583362441445, 'n_estimators': 116.4075050314298}</td>
-      <td>{'datetime': '2020-10-30 11:36:38', 'elapsed': 4.104478, 'delta': 0.46138199999999996}</td>
+      <td>0.99</td>
+      <td>{'ccp_alpha': 0.043781538376893005, 'max_depth': 62.67572775871829, 'min_samples_split': 46.88187614036777, 'n_estimators': 358.8362393777668}</td>
+      <td>{'datetime': '2020-10-30 12:15:35', 'elapsed': 4.171425, 'delta': 1.260813}</td>
+      <td>forest</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0.99</td>
+      <td>{'ccp_alpha': 0.01, 'max_depth': 44.14258634567429, 'min_samples_split': 2.0, 'n_estimators': 360.63113095974927}</td>
+      <td>{'datetime': '2020-10-30 12:15:40', 'elapsed': 8.294351, 'delta': 1.25263}</td>
+      <td>forest</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0.99</td>
+      <td>{'ccp_alpha': 0.1, 'max_depth': 105.0, 'min_samples_split': 25.40894051245977, 'n_estimators': 158.47752924077685}</td>
+      <td>{'datetime': '2020-10-30 12:15:40', 'elapsed': 9.178861, 'delta': 0.88451}</td>
+      <td>forest</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0.99</td>
+      <td>{'ccp_alpha': 0.069757657642516, 'max_depth': 75.70271526835617, 'min_samples_split': 2.0, 'n_estimators': 389.6688850547288}</td>
+      <td>{'datetime': '2020-10-30 12:15:42', 'elapsed': 10.656779, 'delta': 1.4779179999999998}</td>
+      <td>forest</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0.99</td>
+      <td>{'ccp_alpha': 0.1, 'max_depth': 105.0, 'min_samples_split': 2.0, 'n_estimators': 247.90684002652753}</td>
+      <td>{'datetime': '2020-10-30 12:15:43', 'elapsed': 11.944733, 'delta': 1.287954}</td>
+      <td>forest</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>0.89</td>
+      <td>{'gamma': 5.7300257335118445, 'learning_rate': 0.22360059477888103, 'max_depth': 3.8748947524170463, 'min_child_weight': 0.341132165498487, 'n_estimators': 86.43925887285536, 'subsample': 0.499383142077564}</td>
+      <td>{'datetime': '2020-10-30 12:14:42', 'elapsed': 1.201651, 'delta': 0.12539799999999998}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0.89</td>
+      <td>{'ccp_alpha': 0.090029399554787, 'max_depth': 89.50191040914383, 'min_samples_split': 54.93897219851763, 'n_estimators': 160.88551700701495}</td>
+      <td>{'datetime': '2020-10-30 12:15:38', 'elapsed': 7.041721, 'delta': 0.594742}</td>
+      <td>forest</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>0.88</td>
+      <td>{'gamma': 21.120544444663825, 'learning_rate': 0.22791705648514501, 'max_depth': 4.042679275107872, 'min_child_weight': 0.295275762314321, 'n_estimators': 58.5552736817226, 'subsample': 0.314009255628853}</td>
+      <td>{'datetime': '2020-10-30 12:14:43', 'elapsed': 1.287337, 'delta': 0.085686}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>0.87</td>
+      <td>{'gamma': 16.44338760251217, 'learning_rate': 0.05256451789020201, 'max_depth': 10.204316877141467, 'min_child_weight': 0.37087034414053205, 'n_estimators': 46.822120065426, 'subsample': 0.9300408535358081}</td>
+      <td>{'datetime': '2020-10-30 12:14:42', 'elapsed': 0.708824, 'delta': 0.078763}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0.87</td>
+      <td>{'gamma': 5.438404255901645, 'learning_rate': 0.09912926135240001, 'max_depth': 10.875423657001221, 'min_child_weight': 0.29817664781213604, 'n_estimators': 16.20797044801588, 'subsample': 0.427833352953212}</td>
+      <td>{'datetime': '2020-10-30 12:14:42', 'elapsed': 0.489853, 'delta': 0.029512999999999998}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0.87</td>
+      <td>{'gamma': 23.902685646619545, 'learning_rate': 0.140220199304396, 'max_depth': 10.427755231286966, 'min_child_weight': 0.190043303481046, 'n_estimators': 78.53806058006883, 'subsample': 0.9309827198629641}</td>
+      <td>{'datetime': '2020-10-30 12:14:41', 'elapsed': 0.269099, 'delta': 0.14562899999999998}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>0.87</td>
+      <td>{'gamma': 8.242909356404795, 'learning_rate': 0.16402715204211002, 'max_depth': 4.102014314175854, 'min_child_weight': 0.254792568787706, 'n_estimators': 81.02980474091669, 'subsample': 0.582389761305676}</td>
+      <td>{'datetime': '2020-10-30 12:14:43', 'elapsed': 1.418638, 'delta': 0.131301}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0.85</td>
+      <td>{'gamma': 12.065206351393131, 'learning_rate': 0.237563668878209, 'max_depth': 10.40085688904697, 'min_child_weight': 0.45836193440548206, 'n_estimators': 64.7779454870973, 'subsample': 0.690572316508353}</td>
+      <td>{'datetime': '2020-10-30 12:14:42', 'elapsed': 0.46034, 'delta': 0.09467}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>0.85</td>
+      <td>{'gamma': 26.845075131722044, 'learning_rate': 0.05637995945751, 'max_depth': 5.2311147200267865, 'min_child_weight': 0.38931716803493505, 'n_estimators': 99.60686866353187, 'subsample': 0.668658337550876}</td>
+      <td>{'datetime': '2020-10-30 12:14:42', 'elapsed': 0.630061, 'delta': 0.140208}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>0.85</td>
+      <td>{'gamma': 29.098063156312993, 'learning_rate': 0.132438457038936, 'max_depth': 6.760558963353372, 'min_child_weight': 0.20321910481126101, 'n_estimators': 89.52767108203464, 'subsample': 0.9907861999654861}</td>
+      <td>{'datetime': '2020-10-30 12:14:42', 'elapsed': 0.866756, 'delta': 0.157932}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>0.85</td>
+      <td>{'gamma': 35.40752339424799, 'learning_rate': 0.11638576576879502, 'max_depth': 11.946226616391376, 'min_child_weight': 0.21271170406467202, 'n_estimators': 22.473116195253535, 'subsample': 0.941746701654088}</td>
+      <td>{'datetime': '2020-10-30 12:14:42', 'elapsed': 0.9163319999999999, 'delta': 0.049575999999999995}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>0.84</td>
+      <td>{'gamma': 12.008139725538545, 'learning_rate': 0.190519070111762, 'max_depth': 10.277996345197241, 'min_child_weight': 0.10229010266377, 'n_estimators': 64.2924671568606, 'subsample': 0.32337358470530403}</td>
+      <td>{'datetime': '2020-10-30 12:14:42', 'elapsed': 1.076253, 'delta': 0.089782}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0.82</td>
+      <td>{'gamma': 21.349653589083115, 'learning_rate': 0.21358292424761802, 'max_depth': 9.566140475222866, 'min_child_weight': 0.528480038845596, 'n_estimators': 94.42886299055723, 'subsample': 0.391226481412892}</td>
+      <td>{'datetime': '2020-10-30 12:14:41', 'elapsed': 0.12347000000000001, 'delta': 0.12347000000000001}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0.82</td>
+      <td>{'gamma': 28.70720798082302, 'learning_rate': 0.252551849877212, 'max_depth': 6.481601351187299, 'min_child_weight': 0.5701211390530441, 'n_estimators': 86.78484184655254, 'subsample': 0.44040453871295304}</td>
+      <td>{'datetime': '2020-10-30 12:14:42', 'elapsed': 0.36567000000000005, 'delta': 0.09657099999999999}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>0.57</td>
+      <td>{'gamma': 38.070990054984044, 'learning_rate': 0.28076336388418605, 'max_depth': 9.327504220779613, 'min_child_weight': 0.5628833420567271, 'n_estimators': 22.270791810081622, 'subsample': 0.604910459818371}</td>
+      <td>{'datetime': '2020-10-30 12:14:42', 'elapsed': 0.986471, 'delta': 0.07013899999999999}</td>
+      <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0.51</td>
+      <td>{'ccp_alpha': 0.040246899179255, 'max_depth': 49.92967821882293, 'min_samples_split': 57.113265209214546, 'n_estimators': 420.89718548783173}</td>
+      <td>{'datetime': '2020-10-30 12:15:38', 'elapsed': 6.446979, 'delta': 1.372838}</td>
       <td>forest</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.50</td>
-      <td>{'ccp_alpha': 0.06575421706737801, 'max_depth': 49.71766103421805, 'min_samples_split': 78.08726002355733, 'n_estimators': 271.9336623177094}</td>
-      <td>{'datetime': '2020-10-30 11:36:39', 'elapsed': 5.035306, 'delta': 0.930828}</td>
+      <td>0.51</td>
+      <td>{'ccp_alpha': 0.057339702313048004, 'max_depth': 25.554099877521686, 'min_samples_split': 69.38910049608978, 'n_estimators': 241.34776350907418}</td>
+      <td>{'datetime': '2020-10-30 12:15:36', 'elapsed': 5.074141, 'delta': 0.902716}</td>
       <td>forest</td>
     </tr>
     <tr>
-      <th>19</th>
-      <td>0.50</td>
-      <td>{'gamma': 39.935878552782476, 'learning_rate': 0.1754922686227, 'max_depth': 9.081110196661328, 'min_child_weight': 0.029048756531812003, 'n_estimators': 26.182793779434512, 'subsample': 0.266547284912096}</td>
-      <td>{'datetime': '2020-10-30 11:37:28', 'elapsed': 0.232158, 'delta': 0.030697}</td>
-      <td>xgboost</td>
+      <th>2</th>
+      <td>0.51</td>
+      <td>{'ccp_alpha': 0.010163693535097001, 'max_depth': 75.53338720453232, 'min_samples_split': 85.32894324650903, 'n_estimators': 106.00648636175973}</td>
+      <td>{'datetime': '2020-10-30 12:15:32', 'elapsed': 0.58179, 'delta': 0.41872499999999996}</td>
+      <td>forest</td>
     </tr>
     <tr>
       <th>15</th>
       <td>0.50</td>
-      <td>{'gamma': 29.787459068800004, 'learning_rate': 0.070520812724949, 'max_depth': 5.799492866833579, 'min_child_weight': 0.5738455611274651, 'n_estimators': 36.825644774178656, 'subsample': 0.073401749896599}</td>
-      <td>{'datetime': '2020-10-30 11:37:28', 'elapsed': 0.0, 'delta': 0.0}</td>
+      <td>{'gamma': 18.63749998555996, 'learning_rate': 0.13918876224437302, 'max_depth': 4.452858224882912, 'min_child_weight': 0.134993520008951, 'n_estimators': 55.72801664920143, 'subsample': 0.13589948304816402}</td>
+      <td>{'datetime': '2020-10-30 12:14:41', 'elapsed': 0.0, 'delta': 0.0}</td>
       <td>xgboost</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.49</td>
+      <td>{'ccp_alpha': 0.093135940132959, 'max_depth': 62.35607029188777, 'min_samples_split': 70.7404728288455, 'n_estimators': 35.040512564710355}</td>
+      <td>{'datetime': '2020-10-30 12:15:31', 'elapsed': 0.163065, 'delta': 0.163065}</td>
+      <td>forest</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.49</td>
+      <td>{'ccp_alpha': 0.032360585782017004, 'max_depth': 37.335790596710524, 'min_samples_split': 83.22619687861788, 'n_estimators': 282.22859485163144}</td>
+      <td>{'datetime': '2020-10-30 12:15:34', 'elapsed': 2.910612, 'delta': 0.891473}</td>
+      <td>forest</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.49</td>
+      <td>{'ccp_alpha': 0.023023364312866, 'max_depth': 67.5729089671003, 'min_samples_split': 64.6490529306644, 'n_estimators': 170.31280438723786}</td>
+      <td>{'datetime': '2020-10-30 12:15:32', 'elapsed': 1.195543, 'delta': 0.613753}</td>
+      <td>forest</td>
     </tr>
   </tbody>
 </table>
@@ -515,19 +500,19 @@ The best score for the hyperparameters are 0.9099999999999999
 
 <div class="output_text output_subarea output_execute_result">
 <pre>{&#39;bootstrap&#39;: True,
- &#39;ccp_alpha&#39;: 0.08830026526241672,
+ &#39;ccp_alpha&#39;: 0.029834902375002192,
  &#39;class_weight&#39;: None,
  &#39;criterion&#39;: &#39;gini&#39;,
- &#39;max_depth&#39;: 100,
+ &#39;max_depth&#39;: 35,
  &#39;max_features&#39;: &#39;auto&#39;,
  &#39;max_leaf_nodes&#39;: None,
  &#39;max_samples&#39;: None,
  &#39;min_impurity_decrease&#39;: 0.0,
  &#39;min_impurity_split&#39;: None,
  &#39;min_samples_leaf&#39;: 1,
- &#39;min_samples_split&#39;: 40,
+ &#39;min_samples_split&#39;: 4,
  &#39;min_weight_fraction_leaf&#39;: 0.0,
- &#39;n_estimators&#39;: 350,
+ &#39;n_estimators&#39;: 406,
  &#39;n_jobs&#39;: -1,
  &#39;oob_score&#39;: False,
  &#39;random_state&#39;: None,
