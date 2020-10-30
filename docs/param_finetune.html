@@ -3366,19 +3366,19 @@ The best score for the hyperparameters are 0.518258945911371
 
 
  
-<span class="nd">@optimize_bayes_param</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span><span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;explained_variance&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">optimize_lgbm</span><span class="p">(</span><span class="n">num_leaves</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span><span class="n">learning_rate</span><span class="p">:</span><span class="nb">float</span><span class="p">,</span> <span class="n">min_child_samples</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">reg_alpha</span><span class="p">,</span> <span class="n">reg_lambda</span><span class="p">,</span>  <span class="n">colsample_bytree</span><span class="p">:</span><span class="nb">float</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">LGBMRegressor</span><span class="p">(</span><span class="o">**</span><span class="p">{</span>
-        <span class="s2">&quot;num_leaves&quot;</span> <span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_leaves</span><span class="p">),</span>
-        <span class="s2">&quot;learning_rate&quot;</span> <span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">),</span>
-        <span class="s2">&quot;min_child_samples&quot;</span> <span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">min_child_samples</span><span class="p">),</span>
-        <span class="s2">&quot;reg_alpha&quot;</span> <span class="p">:</span> <span class="n">reg_alpha</span><span class="p">,</span>
-        <span class="s2">&quot;reg_lambda&quot;</span> <span class="p">:</span> <span class="n">reg_lambda</span><span class="p">,</span>
-        <span class="s1">&#39;colsample_bytree&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">colsample_bytree</span><span class="p">)</span> 
-    <span class="p">})</span>
+<span class="c1"># @optimize_bayes_param(X=x, y=y,scoring = &#39;explained_variance&#39;)</span>
+<span class="c1"># def optimize_lgbm(num_leaves: int,learning_rate:float, min_child_samples:int, reg_alpha, reg_lambda,  colsample_bytree:float):</span>
+<span class="c1">#     return LGBMRegressor(**{</span>
+<span class="c1">#         &quot;num_leaves&quot; : int(num_leaves),</span>
+<span class="c1">#         &quot;learning_rate&quot; : float(learning_rate),</span>
+<span class="c1">#         &quot;min_child_samples&quot; : int(min_child_samples),</span>
+<span class="c1">#         &quot;reg_alpha&quot; : reg_alpha,</span>
+<span class="c1">#         &quot;reg_lambda&quot; : reg_lambda,</span>
+<span class="c1">#         &#39;colsample_bytree&#39;: float(colsample_bytree) </span>
+<span class="c1">#     })</span>
 
 
-<span class="n">best_model</span> <span class="o">=</span> <span class="n">optimize_lgbm</span><span class="p">(</span><span class="n">init_points</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pbounds</span><span class="o">=</span> <span class="n">params_lgbm</span><span class="p">,</span> <span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;./bayes_opt_logs/lgbm_test&quot;</span><span class="p">)</span>
+<span class="c1">#best_model = optimize_lgbm(init_points=1000, n_iter=10, pbounds= params_lgbm, log_dir=&quot;./bayes_opt_logs/lgbm_test&quot;)</span>
 </pre></div>
 
     </div>
