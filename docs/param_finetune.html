@@ -597,7 +597,7 @@ The best score for the hyperparameters are 0.8320000000000001
     <span class="p">})</span>
 
 
-<span class="n">best_model</span> <span class="o">=</span> <span class="n">optimize_lgbm</span><span class="p">(</span><span class="n">init_points</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pbounds</span><span class="o">=</span> <span class="n">params_lgbm</span><span class="p">,</span> <span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;./bayes_opt_logs/lgbm&quot;</span><span class="p">)</span>
+<span class="n">best_model</span> <span class="o">=</span> <span class="n">optimize_lgbm</span><span class="p">(</span><span class="n">init_points</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pbounds</span><span class="o">=</span> <span class="n">params_lgbm</span><span class="p">,</span> <span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;./bayes_opt_logs/lgbm_test&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -746,7 +746,7 @@ The best score for the hyperparameters are 0.9039999999999999
     <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
 
 
-<span class="n">best_model</span> <span class="o">=</span> <span class="n">optimize_xgboost</span><span class="p">(</span><span class="n">init_points</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pbounds</span><span class="o">=</span><span class="n">params_xgboost</span><span class="p">,</span> <span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;./bayes_opt_logs/xgboost&quot;</span><span class="p">)</span>
+<span class="n">best_model</span> <span class="o">=</span> <span class="n">optimize_xgboost</span><span class="p">(</span><span class="n">init_points</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pbounds</span><span class="o">=</span><span class="n">params_xgboost</span><span class="p">,</span> <span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;./bayes_opt_logs/xgboost_test&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -3286,7 +3286,7 @@ z
     <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
 
 
-<span class="n">best_model</span> <span class="o">=</span> <span class="n">optimize_xgboost</span><span class="p">(</span><span class="n">init_points</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">pbounds</span><span class="o">=</span><span class="n">params_xgboost</span><span class="p">,</span> <span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;./bayes_opt_logs/xgboost&quot;</span><span class="p">)</span>
+<span class="n">best_model</span> <span class="o">=</span> <span class="n">optimize_xgboost</span><span class="p">(</span><span class="n">init_points</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">pbounds</span><span class="o">=</span><span class="n">params_xgboost</span><span class="p">,</span> <span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;./bayes_opt_logs/xgboost_test&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -3378,7 +3378,7 @@ The best score for the hyperparameters are 0.518258945911371
     <span class="p">})</span>
 
 
-<span class="n">best_model</span> <span class="o">=</span> <span class="n">optimize_lgbm</span><span class="p">(</span><span class="n">init_points</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pbounds</span><span class="o">=</span> <span class="n">params_lgbm</span><span class="p">,</span> <span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;./bayes_opt_logs/lgbm&quot;</span><span class="p">)</span>
+<span class="n">best_model</span> <span class="o">=</span> <span class="n">optimize_lgbm</span><span class="p">(</span><span class="n">init_points</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pbounds</span><span class="o">=</span> <span class="n">params_lgbm</span><span class="p">,</span> <span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;./bayes_opt_logs/lgbm_test&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -3545,7 +3545,7 @@ The best score for the hyperparameters are 0.7081512613696713
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_rf</span> <span class="o">=</span> <span class="n">optimize_forest</span><span class="p">(</span><span class="n">init_points</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pbounds</span><span class="o">=</span><span class="n">params_forest</span><span class="p">,</span> <span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;./bayes_opt_logs/forest&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_rf</span> <span class="o">=</span> <span class="n">optimize_forest</span><span class="p">(</span><span class="n">init_points</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pbounds</span><span class="o">=</span><span class="n">params_forest</span><span class="p">,</span> <span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;./bayes_opt_logs/forest_test&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>

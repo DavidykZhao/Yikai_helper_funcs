@@ -94,7 +94,7 @@ class ModelIterator:
         def optimize_forest(n_estimators, min_samples_split, max_depth , ccp_alpha):
             return RandomForestClassifier(n_estimators=int(n_estimators), min_samples_split=int(min_samples_split),
                                           max_depth = int(max_depth), ccp_alpha = float(ccp_alpha), n_jobs=-1)
-        best_rf = optimize_forest(init_points=self.rf_init_points, n_iter=self.rf_n_iter, pbounds=params_forest, log_dir= self.log_path/"forest")
+        best_rf = optimize_forest(init_points=self.rf_init_points, n_iter=self.rf_n_iter, pbounds=params_forest, log_dir= self.log_path/"forest_test")
         return best_rf
 
 
@@ -115,7 +115,7 @@ class ModelIterator:
             subsample = subsample,
             n_jobs=-1)
 
-        best_xgboost = optimize_xgboost(init_points=self.xgboost_init_points, n_iter=self.xgboost_n_iter, pbounds=params_xgboost, log_dir=self.log_path/"xgboost")
+        best_xgboost = optimize_xgboost(init_points=self.xgboost_init_points, n_iter=self.xgboost_n_iter, pbounds=params_xgboost, log_dir=self.log_path/"xgboost_test")
         return best_xgboost
 
     def _run_lightgbm(self, x, y, **kwargs_model):
@@ -141,7 +141,7 @@ class ModelIterator:
                'colsample_bytree': float(colsample_bytree)
             })
 
-        best_lightgbm = optimize_lgbm(init_points=5, n_iter=10, pbounds= params_lgbm, log_dir= self.log_path/"lgbm")
+        best_lightgbm = optimize_lgbm(init_points=5, n_iter=10, pbounds= params_lgbm, log_dir= self.log_path/"lgbm_test")
         return best_lightgbm
 
     def fit_predict(self, compile_results = True):
