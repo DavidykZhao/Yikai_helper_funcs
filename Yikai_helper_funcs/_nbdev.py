@@ -3,6 +3,7 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"say_hello": "00_core.ipynb",
+         "say_bye": "00_core.ipynb",
          "optimize_bayes_param": "01_bayes_opt.ipynb",
          "ReadTabBatchIdentity": "02_tab_ae.ipynb",
          "TabularPandasIdentity": "02_tab_ae.ipynb",
